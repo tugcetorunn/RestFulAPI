@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        async function getData() {
+            //fetch('/api/urun')
+            //    .then(response => response.json())
+            //    .then(data => {
+            //        console.log(data);
+            //        // İşlemler
+            //    })
+            //    .catch(error => console.error('Hata:', error));
+
+            //$.ajax({
+            //    url: '/api/urun',
+            //    type: 'GET',
+            //    dataType: 'json',
+            //    success: function (data) {
+            //        console.log(data);
+            //        // İşlemler
+            //    },
+            //    error: function (xhr, status, error) {
+            //        console.error('Hata:', error);
+            //    }
+            //});
+
+            // fetch("http://localhost:5039/api/Baslangic/Liste").then(x => x.text()).then(x => alert(x)); // fetch async çalışır // http://localhost:5246/html/htmlpage.html
+
+            let data;
+            await fetch("http://localhost:5039/api/baslangic/liste").then(x => x.json()).then(x => (data = x)); 
+            //document.writeln(data);
+            tabloOlustur(data);
+        }
+        function tabloOlustur() {
+            let tablo = document.getElementById("tablo");
+
+            let strHtml = "";
+            for (let item of data) {
+                strHtml += "<tr><td>" + item.urunAdi + "</td></tr>";
+            }
+
+            tablo.innerHTML = strHtml;
+        }
+    </script>
+</head>
+<body>
+    <!--<button onclick="getData()">Get Data</button>-->
+    <button onclick="tabloOlustur()">Get Data</button>
+    <table id="tablo" border="1">
+
+    </table>
+</body>
+</html>

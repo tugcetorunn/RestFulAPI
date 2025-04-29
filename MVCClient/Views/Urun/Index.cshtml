@@ -1,0 +1,17 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Ürün Listesi";
+}
+
+<h1>Ürün Listesi</h1>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>
+            <strong>@product.UrunAdi</strong> - @product.Fiyat.ToString("C")
+            <br />
+            @*<a href="@Url.Action("Details", "Urun", new { id = product.Id })">Detaylar</a>*@
+        </li>
+    }
+</ul>

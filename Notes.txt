@@ -1,0 +1,31 @@
+﻿SOA - service orriented architecture
+Dağıtık mimari -> client - server
+windows serviceleri client da aynı pc de olabilir sunucu da - (sql server -> management studio - sql server)
+.net remoting 2008 e kadar kullanıldı sonra wcf çıktı. o da 2019 a kadar devam etti. daha sonra web api kullanılmaya başlandı. restful mimari kullanılıyor.
+WCF - windows communication foundation 
+Web API - HTTP üzerinden veri alışverişi yapar. RESTful mimari kullanır. 
+SOAP - xml tabanlı bir protokoldür. WCF ile kullanılabilir.
+REST - Representational State Transfer
+RESTful mimari - HTTP protokolü üzerinden veri alışverişi yapar. JSON formatında veri gönderir.
+2017 yılında microsoft azure service tabanlı işletim sistemi çıkardı. 
+Azure - bulut tabanlı bir platformdur.
+artık pc nize photoshop vs bir şey kurmanıza gerek yok. bulut tabanlı bir platformda çalışabilirsiniz.
+nvidia now teknolojisi...
+bulut tabanlı bir oyun platformudur.
+---
+artık pc nize işletim sistemi de yüklemenize gerek yok... - geleceğimiz nokta - bulut tabanlı işletim sistemleri çıkacak ??
+RESTFUL SERVICES
+2000 YILINDA YAZILMŞ OLAN bir doktora tezi ile ortaya çıkmıştır. 
+client ile server arasında veri alışverişi xml ile yapılıyordu. 
+soap - basit nesneye erişim protokolü - simple object access protocol
+SOAP - xml tabanlı bir protokoldür. amerikada server, localde proxy nesnesi aracı oluyor. bunu metadata ile çözüyorduk. 
+wcf te interface ortak sözleşme (a adres b binding c contact) - wcf nin abc si contact yani interface bize ulaşacağımız metodun adını, parametresini ve dönüş tipini veriyor.
+proxy nesnesi - client tarafında server tarafındaki nesneye erişim sağlıyor. 
+1- serialization - nesneyi xml formatına dönüştürme
+2- ortam bağımlılığından kurtulmak
+3
+
+REST - Representational State Transfer - sadece browsera erişimimiz olması yeterli.
+web apiler arka tarafta view siz mvc kullanır. (controller, model)
+
+
