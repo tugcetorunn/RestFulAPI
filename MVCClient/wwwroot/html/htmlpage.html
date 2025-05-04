@@ -29,16 +29,16 @@
             // fetch("http://localhost:5039/api/Baslangic/Liste").then(x => x.text()).then(x => alert(x)); // fetch async çalışır // http://localhost:5246/html/htmlpage.html
 
             let data;
-            await fetch("http://localhost:5039/api/baslangic/liste").then(x => x.json()).then(x => (data = x)); 
+            await fetch("http://localhost:5039/api/Baslangic/Liste").then(x => x.json()).then(x => (data = x)); 
             //document.writeln(data);
             tabloOlustur(data);
         }
-        function tabloOlustur() {
+        function tabloOlustur(data) {
             let tablo = document.getElementById("tablo");
 
             let strHtml = "";
             for (let item of data) {
-                strHtml += "<tr><td>" + item.urunAdi + "</td></tr>";
+                strHtml += "<tr><td>" + item.urunId + "</td><td>" + item.urunAdi + "</td><td>" + item.fiyat + "</td></tr>";
             }
 
             tablo.innerHTML = strHtml;
@@ -47,7 +47,7 @@
 </head>
 <body>
     <!--<button onclick="getData()">Get Data</button>-->
-    <button onclick="tabloOlustur()">Get Data</button>
+    <button onclick="getData()">Get Data</button>
     <table id="tablo" border="1">
 
     </table>
